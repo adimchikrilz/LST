@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+/* Reset any potential body/html margins that might affect full width */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  font-family: Montserrat;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Top Bar Styles */
+.topBar {
+  background-color: #23856D;
+  color: white;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.topBarContainer {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.socialPromo {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+}
+
+.socialLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.2s;
+}
+
+.socialLinks a:hover {
+  opacity: 0.8;
+}
+
+/* Main Header Styles */
+.mainHeader {
+  background-color: #FFFFFF;
+  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+  margin: 0;
+  padding: 0;
+}
+
+.mainHeaderContainer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #252B42;
+  text-decoration: none;
+  letter-spacing: 0.1px;
+}
+
+.nav {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+
+.nav a {
+  color: #737373;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #23A6F0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdownArrow {
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+.dropdown:hover .dropdownArrow {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 12px 0;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: flex;
+}
+
+.dropdownMenu a {
+  color: #737373;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdownMenu a:hover {
+  color: #23A6F0;
+  background-color: #F8F9FA;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 50px;
+}
+
+.loginLink {
+  color: #23A6F0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.loginLink:hover {
+  opacity: 0.8;
+}
+
+.iconLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #23A6F0;
+  text-decoration: none;
+  font-size: 16px;
+  gap: 5px;
+  transition: opacity 0.2s;
+}
+
+.iconLink:hover {
+  opacity: 0.8;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #23A6F0;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wishlistCount {
+  color: #23A6F0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Hamburger Menu Toggle */
+.hamburgerToggle {
+  display: none;
+  color: #252B42;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Mobile Navigation Menu */
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0;
+  background-color: #FFFFFF;
+  width: 100%;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobileNav a {
+  color: #737373;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.2px;
+  transition: color 0.2s;
+}
+
+.mobileNav a:hover {
+  color: #23A6F0;
+}
+
+/* Logo and Icons Row */
+.logoAndIcons {
+  display: none;
+}
+
+.mobileIcons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  /* Hide top bar completely on mobile */
+  .topBar {
+    display: none;
+  }
+
+  .mainHeaderContainer {
+    padding: 23px 24px 0 24px;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  /* Show logo and icons row */
+  .logoAndIcons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* Hide desktop navigation */
+  .nav {
+    display: none;
+  }
+
+  /* Show mobile navigation when open */
+  .mobileNav {
+    display: flex;
+    width: 100%;
+  }
+
+  /* Update user actions for mobile */
+  .userActions {
+    position: absolute;
+    top: 23px;
+    right: 24px;
+    gap: 20px;
+    margin-right: 40px;
+    align-items: center;
+  }
+
+  /* Hide login link and wishlist on mobile */
+  .loginLink,
+  .iconLink:last-child {
+    display: none;
+  }
+
+  /* Show only search and cart icons */
+  .userActions .iconLink {
+    color: #252B42;
+    font-size: 24px;
+  }
+
+  /* Remove text from cart icon on mobile */
+  .userActions .iconLink .wishlistCount {
+    display: none;
+  }
+
+  /* Show hamburger menu */
+  .hamburgerToggle {
+    display: block;
+  }
+
+  /* Adjust mobile icons container */
+  .mobileIcons {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Space for the icons that will be positioned absolutely */
+  }
+}
+
+@media (max-width: 480px) {
+  .mainHeaderContainer {
+    padding: 20px 16px 0 16px;
+  }
+
+  .logoAndIcons {
+    padding: 0;
+  }
+
+  .userActions {
+    top: 20px;
+    right: 16px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+
+  .mobileIcons {
+    gap: 50px;
+  }
+
+  .userActions .iconLink,
+  .hamburgerToggle {
+    font-size: 20px;
+  }
+}

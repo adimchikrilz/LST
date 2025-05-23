@@ -1,0 +1,95 @@
+/* src/components/ProductCard/ProductCard.module.css */
+.productCard {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .productCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .newTag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #DC3545;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .productCategory {
+    font-size: 16px;
+    color: #252B42;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .productDepartment {
+    font-size: 14px;
+    color: #737373;
+    margin: 5px 0;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  
+  .productTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #252B42;
+    margin: 10px 0;
+  }
+  
+  .price {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .originalPrice {
+    color: #737373;
+    text-decoration: line-through;
+    font-size: 14px;
+  }
+  
+  .discountedPrice {
+    color: #23856d; /* Updated to match Figma design */
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  .addToCartBtn {
+    padding: 10px 20px;
+    background-color: #23A6F0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .addToCartBtn:hover:not(:disabled) {
+    background-color: #1e8ed5;
+  }
+  
+  .addToCartBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
