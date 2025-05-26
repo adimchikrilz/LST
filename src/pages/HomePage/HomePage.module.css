@@ -340,6 +340,11 @@ html, body {
     font-size: 12px;
     color: #737373;
   }
+
+  .postTags {
+    font-size: 12px;
+    color: #8ec2f2;
+  }
   
   .postTitle {
     font-size: 20px;
@@ -628,6 +633,7 @@ html, body {
   @media (max-width: 768px) {
     html, body {
       overflow-x: visible;
+      max-width: 768px !important;
     }
     .container {
       padding: 0 20px;
@@ -711,6 +717,10 @@ html, body {
     
     .sectionSubtitle {
       font-size: 16px;
+    }
+
+    .learnMoreBtn{
+      margin-right: 380px;
     }
   }
 

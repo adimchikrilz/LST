@@ -182,7 +182,7 @@ const HomePage = () => {
                 </div>
                 <div className={styles.postContent}>
                 <div className={styles.postTags}>
-                    <span className={styles.postTag}>Google</span>
+                    <span className={styles.postTags}>Google</span>
                     <span className={styles.postTag}>Trending</span>
                     <span className={styles.postTag}>New</span>
                 </div>

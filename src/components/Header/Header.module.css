@@ -299,6 +299,7 @@
   /* Hide top bar completely on mobile */
   .topBar {
     display: none;
+    
   }
 
   .mainHeaderContainer {
@@ -306,6 +307,7 @@
     flex-direction: column;
     gap: 0;
     position: relative;
+    
   }
 
   /* Show logo and icons row */
